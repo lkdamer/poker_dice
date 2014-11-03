@@ -16,7 +16,13 @@ describe Hand do
     expect( Hand.new.dice.length ).to eq( 5 )
   end
 
-  specify "scoring function scores a hand" do
-    expect( Hand.new.score ).to 
+  # specify "scoring function scores a hand" do
+  #   expect( Hand.new.score ).to
+  # end
+
+  specify "face value function displays faces in a list" do
+    expect(Hand.new.show_faces).to  match(%w[/([9TJQKA] ){5}/])
   end
+
+
 end
