@@ -4,11 +4,8 @@ class Hand
 
   attr_reader :dice
 
-  def initialize
-    @dice = []
-    5.times do
-      @dice << Die.new
-    end
+  def initialize (dice)
+    @dice = dice
   end
 
 end
