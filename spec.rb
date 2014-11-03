@@ -15,4 +15,8 @@ describe Hand do
   specify "hand has five dice" do
     expect( Hand.new.dice.length ).to eq( 5 )
   end
+
+  specify "scoring function scores a hand" do
+    expect( Hand.new.score ).to 
+  end
 end
