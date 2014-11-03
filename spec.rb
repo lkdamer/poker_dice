@@ -13,7 +13,8 @@ end
 
 describe Hand do
   specify "hand has five dice" do
-    expect( Hand.new.dice.length ).to eq( 5 )
+    dice = 5.times.map { Die.new }
+    expect( Hand.new(dice).dice.length ).to eq( 5 )
   end
 
   # specify "scoring function scores a hand" do
@@ -21,7 +22,8 @@ describe Hand do
   # end
 
   specify "face value function displays faces in a list" do
-    expect(Hand.new.show_faces).to  match(%w[/([9TJQKA] ){5}/])
+    dice = 5.times.map { Die.new.loaded_die }
+    expect(Hand.new(dice).show_faces).to  match( %w[ Q Q Q Q Q ] )
   end
 
 

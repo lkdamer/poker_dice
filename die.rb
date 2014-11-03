@@ -12,4 +12,9 @@ class Die
     @top_face = FACES.sample #[ rand(0..5) ] also can
   end
 
+  def loaded_die
+    @top_face = 'Q'
+    self
+  end
+
 end
