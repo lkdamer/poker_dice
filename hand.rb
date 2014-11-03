@@ -9,7 +9,6 @@ class Hand
   end
 
   def show_faces
-    puts @dice.inspect
     @dice.map do |die|
         die.top_face
     end
